@@ -1,0 +1,98 @@
+<?php
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <iframe src="PICS/index.html" frameborder="0" scrolling="no" style="position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; z-index: -1;"></iframe>
+    <title>Login Page</title>
+<!-- ============== CSS links  ================= -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" title="Membership">Membership</a>
+        </li>
+        <li>
+          <a href="#" title="About">About us</a>
+        </li>
+        <li>
+          <a class="btn" href="/Nuxt App with Login and Redirect/LANDING PAGE FINAL!/dist/index.html" title="Register / Log In">Home page</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container" id="container">
+    
+<!-- =============== Registration Form ===============-->
+<div class="form-container register-container">
+  <form action="register.php" method="POST">
+    <h1>Welcome aboard Komyut!</h1>
+    <input type="user-name" placeholder="Username" name="username">
+    <input type="email" placeholder="Email" name="email">
+    <input type="password" placeholder="Password" name="password">
+    <input type="password" placeholder="Confirm Password" name="password">
+    <button>Register</button>
+  </form>
+</div>
+
+
+<!-- =============== Login Form ===============-->
+    <div class="form-container login-container">
+      <form action="login.php" method="POST">
+        <h1>Welcome back to Komyut!</h1>
+        <input type="user_name" placeholder="Username/Email" name="Email", name="username">
+        <input type="password" placeholder="Password" name="password">
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label>Remember me</label>
+          </div>
+          <div class="pass-link">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+        <button>Log In</button>
+
+      </form>
+    </div>
+
+<!-- =============== Overlays ===============-->
+    <div class="overlay-container">
+      <div class="overlay">
+     <!-- login -->
+        <div class="overlay-panel overlay-left">
+          <h1 class="title">Already have an account?<br> Click the Log in below </br> </h1>
+          <p></p>
+          <button class="ghost" id="login">login
+            <i class="lni lni-arrow-left login"></i>
+          </button>
+        </div>
+     <!-- register -->
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">New to Komyut? <br>Click the register below </br></h1>
+          <p></p>
+          <button class="ghost" id="register">Register
+            <i class="lni lni-arrow-right register"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

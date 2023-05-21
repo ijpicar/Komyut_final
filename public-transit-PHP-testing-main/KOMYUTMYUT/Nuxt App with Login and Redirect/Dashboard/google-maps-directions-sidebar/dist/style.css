@@ -1,0 +1,517 @@
+.demo--container {
+  position: fixed;
+  width: 410px;
+}
+
+.directions {
+  box-shadow: 2px 0 10px 0 #000000;
+  height: 100vh;
+}
+
+.directions .link-styles-dark,
+.directions .directions__options a,
+.directions__options .directions a,
+.directions .directions__basics--address a,
+.directions__basics--address .directions a,
+.directions .directions__basics--header a,
+.directions__basics--header .directions a {
+  color: rgb(0, 0, 0);
+}
+
+.saved_route {
+  border-bottom: 1px solid #000000;
+}
+.saved_route2 {
+  border-bottom: 1px solid #000000;
+}
+
+.directions .link-styles-dark:hover,
+.directions .directions__options a:hover,
+.directions__options .directions a:hover,
+.directions .directions__basics--address a:hover,
+.directions__basics--address .directions a:hover,
+.directions .directions__basics--header a:hover,
+.directions__basics--header .directions a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+
+
+.directions .link-styles-light:hover,
+.directions .directions__routes a:hover,
+.directions__routes .directions a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.directions__basics {
+  background: #0bd6b4;
+  padding: 15px;
+}
+
+.directions__basics--header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.directions__basics--header .directions--menu {
+  width: 10%;
+}
+
+.directions__basics--header .transportation--type {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.directions__basics--header .transportation--type a {
+  opacity: 0.6;
+}
+
+.directions__basics--header .transportation--type a:hover {
+  opacity: 1;
+}
+
+.directions__basics--header .directions--close {
+  width: 10%;
+  text-align: right;
+}
+
+.directions__basics--address {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 0 0;
+  margin-bottom: 15px;
+}
+
+.directions__basics--address .inputs {
+  padding: 0 30px;
+}
+
+.directions__basics--address .inputs input {
+  background: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+.directions__basics--address .inputs input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 0.6;
+}
+
+.directions__basics--address .toggle {
+  font-size: 28px;
+}
+
+.directions__options {
+  background: #0bd6b4;
+  padding: 15px;
+}
+
+.directions__options {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 12px;
+}
+
+.directions__options .add {
+  width: 10%;
+}
+
+.directions__options .leave {
+  width: 60%;
+}
+
+.directions__options .options {
+  width: 30%;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 10px;
+}
+
+.directions__routes {
+  background: rgb(255, 255, 255);
+}
+
+.directions__routes .route {
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #c8c8c8;
+  padding: 15px;
+}
+
+.directions__routes .route:hover {
+  cursor: pointer;
+  background: #f1f1f1;
+}
+
+.directions__routes .route__type {
+  width: 10%;
+  opacity: 0.6;
+}
+
+.directions__routes .route__details {
+  width: 70%;
+  padding: 0 15px;
+}
+
+.directions__routes .route__details .via {
+  font-weight: 700;
+}
+
+.directions__routes .route__details .usual--time {
+  opacity: 0.5;
+}
+
+.directions__routes .route__details .details {
+  text-transform: uppercase;
+  line-height: 4em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.directions__routes .route__time {
+  width: 20%;
+  text-align: center;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.directions__routes .route__time .time {
+  color: #f7941d;
+  font-weight: 500;
+}
+
+.directions__routes .route__time .distance {
+  opacity: 0.6;
+}
+
+.btn {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  border-bottom: none;
+  background-color: rgba(0, 0, 0, 0.555), 255;
+}
+
+.delete-btn {
+  width: 20%;
+  text-align: right;
+  margin-top: 10px;
+  /* Add the desired margin value */
+  padding: 0px;
+  /* Add the desired padding value */
+}
+
+.delete-btn a {
+  color: red;
+  font-weight: 500;
+}
+ 
+.delete-btn .distance {
+  opacity: 0.6;
+}
+
+.delete-btn a {
+  display: inline-block;
+  color: red;
+  text-align: right;
+}
+
+.delete-btn a:hover {
+  opacity: 0.6;
+}
+.directions__options .add {
+  width: 10%;
+  color: yellow;
+  /* Add the desired color value */
+}
+
+#address-one {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#address-two {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+}
+
+.button-container {
+  margin-left: right;
+}
+
+.feedback-buttons {
+  display: relative;
+  gap: 10px;
+}
+
+.feedback-buttons {
+  display: relative;
+  margin-top: 5px;
+}
+
+.feedback-buttons button {
+  margin-right: 10px;
+}
+
+.route-and-button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.route__type {
+  margin-right: 10px;
+}
+
+.logout-btn {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #fa5151;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ff877e;
+  color: white
+}
+
+
+
+.past_starting {
+  margin: 0;
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.past_destination {
+  margin: 0;
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.feedback {
+  margin: auto;
+  display: absolute;
+  width: 50%;
+  font-size: 14px;
+  padding: 5px 11px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border: none;
+}
+
+.add-feedback {
+  position: relative;
+  background-color: rgb(34, 117, 241);
+  left: 50%;
+  bottom: 45px;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: fit-content;
+}
+
+
+.submit_btn {
+  position: relative;
+  right: -66.5%;
+  bottom: 120px;
+  transform: translateY(-50%);
+  background-color: rgb(34, 117, 241);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.delete-btn {
+    background-color: red;
+    position: relative;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: max-content;
+    bottom: 45px;
+    left: 48%;
+}
+
+
+.past_starting2 {
+  margin: 0;
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.past_destination2 {
+  margin: 0;
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.feedback2 {
+  margin: auto;
+  display: absolute;
+  width: 50%;
+  font-size: 14px;
+  padding: 5px 11px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border: none;
+}
+
+.add-feedback2 {
+  position: relative;
+  background-color: rgb(34, 117, 241);
+  left: 50%;
+  bottom: 35px;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: fit-content;
+}
+
+
+.submit_btn2 {
+  position: relative;
+  right: -66.5%;
+  bottom: 120px;
+  transform: translateY(-50%);
+  background-color: rgb(34, 117, 241);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.delete-btn2 {
+  background-color: red;
+  position: relative;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: max-content;
+  bottom: 35px;
+  left: 48%;
+}
+
+
+
+.past_starting3 {
+  margin: 0;
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.past_destination3 {
+  margin: 0;
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.feedback3 {
+  margin: auto;
+  display: absolute;
+  width: 50%;
+  font-size: 14px;
+  padding: 5px 11px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  border: none;
+}
+
+.add-feedback3 {
+  position: relative;
+  background-color: rgb(34, 117, 241);
+  left: 50%;
+  bottom: 35px;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: fit-content;
+}
+
+
+.submit_btn3 {
+  position: relative;
+  right: -66.5%;
+  bottom: 120px;
+  transform: translateY(-50%);
+  background-color: rgb(34, 117, 241);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.delete-btn3 {
+  background-color: red;
+  position: relative;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: max-content;
+  bottom: 35px;
+  left: 48%;
+}

@@ -1,0 +1,411 @@
+.leaflet-routing-container, .leaflet-routing-error {
+    width: 320px;
+    background-color: white;
+    padding-top: 4px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide {
+    width: 32px;
+    height: 32px;
+}
+
+.leaflet-routing-container h2 {
+    font-size: 14px;
+}
+
+.leaflet-routing-container h3 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.leaflet-routing-collapsible .leaflet-routing-geocoders {
+    margin-top: 20px;
+}
+
+.leaflet-routing-alt, .leaflet-routing-geocoders, .leaflet-routing-error {
+    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    max-height: 320px;
+    overflow-y: auto;
+    transition: all 0.2s ease;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-alt, 
+.leaflet-control-container .leaflet-routing-container-hide .leaflet-routing-geocoders {
+    display: none;
+}
+
+.leaflet-bar .leaflet-routing-alt:last-child {
+    border-bottom: none;
+}
+
+.leaflet-routing-alt-minimized {
+    color: #888;
+    max-height: 64px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.leaflet-routing-alt table {
+    border-collapse: collapse;
+}
+
+.leaflet-routing-alt tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.leaflet-routing-alt::-webkit-scrollbar {
+    width: 8px;
+}
+
+.leaflet-routing-alt::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: #eee;
+}
+
+.leaflet-routing-alt::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #888;
+}
+
+.leaflet-routing-icon {
+    background-image: url('leaflet.routing.icons.png');
+    -webkit-background-size: 240px 20px;
+    background-size: 240px 20px;
+    background-repeat: no-repeat;
+    margin: 0;
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+}
+
+.leaflet-routing-icon-continue         { background-position: 0 0; }
+.leaflet-routing-icon-sharp-right      { background-position: -20px 0; }
+.leaflet-routing-icon-turn-right       { background-position: -40px 0; }
+.leaflet-routing-icon-bear-right       { background-position: -60px 0; }
+.leaflet-routing-icon-u-turn           { background-position: -80px 0; }
+.leaflet-routing-icon-sharp-left       { background-position: -100px 0; }
+.leaflet-routing-icon-turn-left        { background-position: -120px 0; }
+.leaflet-routing-icon-bear-left        { background-position: -140px 0; }
+.leaflet-routing-icon-depart           { background-position: -160px 0; }
+.leaflet-routing-icon-enter-roundabout { background-position: -180px 0; }
+.leaflet-routing-icon-arrive           { background-position: -200px 0; }
+.leaflet-routing-icon-via              { background-position: -220px 0; }
+
+.leaflet-routing-geocoders div {
+    padding: 4px 0px 4px 0px;
+}
+
+.leaflet-routing-geocoders input {
+    width: 303px;
+    width: calc(100% - 4px);
+    line-height: 1.67;
+    border: 1px solid #ccc;
+}
+
+.leaflet-routing-geocoders button {
+    font: bold 18px 'Lucida Console', Monaco, monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    margin: 0;
+    margin-right: 3px;
+    float: right;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.leaflet-routing-add-waypoint:after {
+    content: '+';
+}
+
+.leaflet-routing-reverse-waypoints:after {
+    font-weight: normal;
+    content: '\21c5';
+}
+
+.leaflet-routing-geocoders button:hover {
+    background-color: #eee;
+}
+
+.leaflet-routing-geocoders input,.leaflet-routing-remove-waypoint,.leaflet-routing-geocoder {
+    position: relative;
+}
+
+.leaflet-routing-geocoder-result {
+    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    z-index: 1000; /* Arbitrary, but try to be above "most" things. */
+}
+
+.leaflet-routing-geocoder-result table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.leaflet-routing-geocoder-result-open {
+    max-height: 800px;
+}
+
+.leaflet-routing-geocoder-selected, .leaflet-routing-geocoder-result tr:hover {
+    background-color: #eee;
+}
+
+.leaflet-routing-geocoder-no-results {
+    font-style: italic;
+    color: #888;
+}
+
+.leaflet-routing-remove-waypoint {
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.leaflet-routing-remove-waypoint:after {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 1px;
+    z-index: 1;
+    right: 1px;
+    top: 4px;
+    bottom: 0;
+    margin: auto;
+    padding: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    content: "\00d7";
+    text-align: center;
+    cursor: pointer;
+    color: #ccc;
+    background: white;
+    padding-bottom: 16px;
+    margin-top: -16px;
+    padding-right: 4px;
+    line-height: 1;
+}
+
+.leaflet-routing-remove-waypoint:hover {
+    color: black;
+}
+
+.leaflet-routing-instruction-distance {
+    width: 48px;
+}
+
+.leaflet-routing-collapse-btn {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    font-size: 24px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.leaflet-routing-collapse-btn:after {
+    content: '\00d7';
+}
+
+.leaflet-routing-container-hide .leaflet-routing-collapse-btn {
+    position: relative;
+    left: 4px;
+    top: 4px;
+    display: block;
+    width: 26px;
+    height: 23px;
+    background-image: url('routing-icon.png');
+}
+
+.leaflet-routing-container-hide .leaflet-routing-collapse-btn:after {
+    content: none;
+}
+
+.leaflet-top .leaflet-routing-container.leaflet-routing-container-hide {
+    margin-top: 10px !important;
+}
+.leaflet-right .leaflet-routing-container.leaflet-routing-container-hide {
+    margin-right: 10px !important;
+}
+.leaflet-bottom .leaflet-routing-container.leaflet-routing-container-hide {
+    margin-bottom: 10px !important;
+}
+.leaflet-left .leaflet-routing-container.leaflet-routing-container-hide {
+    margin-left: 10px !important;
+}
+.demo--container {
+    position: fixed;
+    width: 410px;
+  }
+  
+  .directions {
+    box-shadow: 2px 0 10px 0 #000000;
+    height: 100vh;
+  }
+  .directions .link-styles-dark, .directions .directions__options a, .directions__options .directions a, .directions .directions__basics--address a, .directions__basics--address .directions a, .directions .directions__basics--header a, .directions__basics--header .directions a {
+    color: rgb(0, 0, 0);
+  }
+  .directions .link-styles-dark:hover, .directions .directions__options a:hover, .directions__options .directions a:hover, .directions .directions__basics--address a:hover, .directions__basics--address .directions a:hover, .directions .directions__basics--header a:hover, .directions__basics--header .directions a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+  }
+  .directions .link-styles-light, .directions .directions__routes a, .directions__routes .directions a {
+    color: #0049d1;
+  }
+  .directions .link-styles-light:hover, .directions .directions__routes a:hover, .directions__routes .directions a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+  }
+  .directions__basics {
+    background: #0bd6b4;
+    padding: 15px;
+  }
+  .directions__basics--header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .directions__basics--header .directions--menu {
+    width: 10%;
+  }
+  .directions__basics--header .transportation--type {
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .directions__basics--header .transportation--type a {
+    opacity: 0.6;
+  }
+  .directions__basics--header .transportation--type a:hover {
+    opacity: 1;
+  }
+  .directions__basics--header .directions--close {
+    width: 10%;
+    text-align: right;
+  }
+  .directions__basics--address {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 0 0;
+    margin-bottom: 15px;
+  }
+  .directions__basics--address .inputs {
+    padding: 0 30px;
+  }
+  .directions__basics--address .inputs input {
+    background: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+  }
+  .directions__basics--address .inputs input::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 0.6;
+  }
+  .directions__basics--address .toggle {
+    font-size: 28px;
+  }
+  .directions__options {
+    background: #0bd6b4;
+    padding: 15px;
+  }
+  .directions__options {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 12px;
+  }
+  .directions__options .add {
+    width: 10%;
+  }
+  .directions__options .leave {
+    width: 60%;
+  }
+  .directions__options .options {
+    width: 30%;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 10px;
+  }
+  .directions__routes {
+    background: rgb(255, 255, 255);
+  }
+  .directions__routes .route {
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+  }
+  .directions__routes .route:hover {
+    cursor: pointer;
+    background: #f1f1f1;
+  }
+  .directions__routes .route__type {
+    width: 10%;
+    opacity: 0.6;
+  }
+  .directions__routes .route__details {
+    width: 70%;
+    padding: 0 15px;
+  }
+  .directions__routes .route__details .via {
+    font-weight: 700;
+  }
+  .directions__routes .route__details .usual--time {
+    opacity: 0.5;
+  }
+  .directions__routes .route__details .details {
+    text-transform: uppercase;
+    line-height: 4em;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .directions__routes .route__time {
+    width: 20%;
+    text-align: right;
+  }
+  .directions__routes .route__time .time {
+    color: #f7941d;
+    font-weight: 500;
+  }
+  .directions__routes .route__time .distance {
+    opacity: 0.6;
+  }
+  .btn {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.555), 255;
+  }
+
+
+@media only screen and (max-width: 640px) {
+    .leaflet-routing-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        height: 100%;
+    }
+}
